@@ -1,0 +1,10 @@
+
+model DailyReport {
+  id          String   @id @default(cuid())
+  date        DateTime @unique
+  deposits    Float
+  withdrawals Float
+  trades      Int
+  income      Float
+  createdAt   DateTime @default(now())
+}
